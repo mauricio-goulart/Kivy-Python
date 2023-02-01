@@ -8,5 +8,8 @@ class Meuaplicativo(App):
     def build(self):
         return GUI
 
+    def on_start(self):
+        self.root.ids
+
 
 Meuaplicativo().run()

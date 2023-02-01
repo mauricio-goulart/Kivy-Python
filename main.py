@@ -7,3 +7,6 @@ GUI = Builder.load_file('tela.kv')
 class Meuaplicativo(App):
     def build(self):
         return GUI
+
+
+Meuaplicativo().run()

@@ -10,9 +10,11 @@ class Meuaplicativo(App):
         return GUI
 
     def on_start(self):
-        self.pegar_cota('USD')
-        self.root.ids['moeda1'].text = 'USD/BRL = R$7.07'
-        self.root.ids['moeda2'].text = 'EUR/BRL = RS$5.50'
+
+        self.root.ids['moeda1'].text = f'USD/BRL = R${self.pegar_cota("USD")}'
+        self.root.ids['moeda2'].text = f'EUR/BRL = R${self.pegar_cota("EUR")}'
+        self.root.ids['moeda3'].text = f'BTC/BRL = R${self.pegar_cota("BTC")}'
+        self.root.ids['moeda4'].text = f'ETH/BRL = R${self.pegar_cota("ETH")}'
 
     def pegar_cota(self, moeda):
         link = f'https://economia.awesomeapi.com.br/last/{moeda}-BRL'
@@ -20,6 +22,7 @@ class Meuaplicativo(App):
         print(requisicao.json())
         dic_requisicao = requisicao.json()
         cotacao = dic_requisicao[f'{moeda}BRL']['bid']
+        return cotacao
 
 
 Meuaplicativo().run()

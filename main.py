@@ -22,7 +22,7 @@ class Meuaplicativo(App):
         print(requisicao.json())
         dic_requisicao = requisicao.json()
         cotacao = dic_requisicao[f'{moeda}BRL']['bid']
-        return cotacao
+        return cotaca
 
 
 Meuaplicativo().run()

@@ -16,7 +16,7 @@ class Meuaplicativo(App):
         self.root.ids['moeda3'].text = f'BTC/BRL = R${self.pegar_cota("BTC")}'
         self.root.ids['moeda4'].text = f'ETH/BRL = R${self.pegar_cota("ETH")}'
 
-    def pegar_cota(self, moeda):
+    def pegar_cota(self, moeda)
         link = f'https://economia.awesomeapi.com.br/last/{moeda}-BRL'
         requisicao = requests.get(link)
         print(requisicao.json())

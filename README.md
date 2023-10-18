@@ -2,7 +2,6 @@
 <html>
 
 <head>
-  <title>Kivy Currency Exchange App</title>
 </head>
 
 <body>
@@ -29,13 +28,13 @@ cd kivy-currency-exchange-app
       </pre>
     </li>
 
-    <li>Instale os pacotes necessários. Certifique-se de ter o Python e o pip instalados.
+  <li>Instale os pacotes necessários. Certifique-se de ter o Python e o pip instalados.
       <pre>
 pip install kivy requests
       </pre>
-    </li>
+  </li>
 
-    <li>Execute a aplicação:
+   <li>Execute a aplicação:
       <pre>
 python main.py
       </pre>
